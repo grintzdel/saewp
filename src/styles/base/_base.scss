@@ -1,0 +1,191 @@
+// BASE STYLES
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%
+}
+
+body {
+  font-family: $font-primary, sans-serif;
+  font-size: 1.6rem;
+}
+
+a {
+  color: inherit;
+  outline: none;
+  text-decoration: none;
+}
+
+
+// BUTTONS
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  color: inherit;
+}
+
+.button--primary {
+  display: inline-block;
+  background-color: $color-font-secondary;
+  color: $color-font-primary;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.3rem;
+  border-radius: 5rem;
+  text-align: center;
+  white-space: nowrap;
+
+  @include responsive($tablet) {
+    padding: 1.5rem 2.8rem;
+  }
+}
+
+.button--secondary {
+  display: inline-block;
+  background-color: $color-btn-primary;
+  color: $color-font-primary;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.3rem;
+  border-radius: 3rem;
+  text-align: center;
+  white-space: nowrap;
+  padding: 1.5rem 2.5rem;
+}
+
+
+// PRICES AND SALES
+.sale--bubble {
+  display: inline-block;
+  padding: 0.7rem clamp(0.7rem, 4vw, 1rem);
+  background-color: $color-sale;
+  text-align: center;
+  color: $color-font-secondary;
+  font-size: clamp(0.9rem, 2vw, 1.2rem);
+  border-radius: 4rem;
+}
+
+.price--sale {
+  font-size: clamp(1.4rem, 2vw, 2rem);
+  color: $color-sale;
+  line-height: 2.5rem;
+}
+
+.price--regular {
+  font-size: clamp(1.4rem, 2vw, 2rem);
+  line-height: 2.5rem;
+}
+
+.price--reduced {
+  font-size: clamp(1.4rem, 2vw, 2rem);
+  color: $color-reduced-price;
+  line-height: 2.5rem;
+}
+
+
+// BREADCRUMBS
+.breadcrumbs {
+  display: none;
+
+  @include responsive($tablet) {
+    display: flex;
+    padding: 3rem clamp(8rem, 10vw, 16rem) 0 clamp(8rem, 10vw, 16rem);
+
+    &__icon {
+      margin-right: 1rem;
+    }
+
+    &__path {
+      margin-right: 0.7rem;
+
+      span, &__text {
+        font-size: 1.3rem;
+        color: $color-font-breadcrumbs;
+      }
+
+      a:last-child {
+        color: $color-font-primary;
+      }
+    }
+  }
+}
+
+
+// NEWSLETTER
+.newsletter {
+  display: none;
+
+  @include responsive($tablet) {
+    display: block;
+    padding: 5rem clamp(3.7rem, 10vw, 16rem);
+
+    &__container {
+      width: 100%;
+      position: relative;
+
+      &__background {
+        img {
+          width: 100%;
+          object-fit: cover;
+          height: 24.2rem;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: $color-font-primary;
+          opacity: 0.3;
+        }
+      }
+    }
+
+    &__content {
+      display: flex;
+      position: absolute;
+      top: clamp(25%, 10vw, 45%);
+      left: clamp(5%, 4vw, 10%);
+      align-items: center;
+      padding-right: 5rem;
+
+      &__title {
+        font-size: 2.9rem;
+        color: $color-font-secondary;
+        max-width: 50rem;
+        margin-right: clamp(3rem, 4vw, 7.3rem);
+      }
+    }
+
+    a {
+      max-height: 4.8rem;
+    }
+
+    .button--primary {
+      text-transform: none;
+      font-size: 1.3rem;
+      color: $color-font-newsletter-input;
+      margin-right: 2rem;
+    }
+  }
+
+  @include max(calc($desktop - $mobile)) {
+   // padding: 5rem 8rem;
+
+    &__content {
+      &__title {
+        font-size: 2.1rem;
+      }
+    }
+  }
+}

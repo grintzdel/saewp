@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="dist/style.css">
+    <title>E-shop</title>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    <div class="header__logo">
+        <img src="src/SVG/header/logo.svg" class="header__logo__img" alt="E-shop's logo" loading="lazy">
+        <a href="#" class="header__logo__title">E-shop</a>
+    </div>
+
+    <nav class="header__nav">
+        <ul class="header__nav__list">
+            <li class="header__nav__list__item"><a href="#" class="header__nav__list__item__link">Men</a></li>
+            <li class="header__nav__list__item"><a href="#" class="header__nav__list__item__link">Women</a></li>
+            <li class="header__nav__list__item"><a href="#" class="header__nav__list__item__link">Kids</a></li>
+        </ul>
+    </nav>
+
+    <div class="header__utilities">
+        <a href=""><img src="src/SVG/header/search.svg" alt="Search utility" loading="lazy"></a>
+        <a href=""><img src="src/SVG/header/cart.svg" alt="Your Cart" loading="lazy"></a>
+        <a href="">
+            <picture>
+                <source srcset="src/SVG/header/avatar.svg" media="(min-width: 768px)">
+                <img src="src/SVG/header/burger-menu.svg" alt="Menu / Your account" loading="lazy">
+            </picture>
+        </a>
+    </div>
+</header>
+
+
+<main>
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero__background">
+            <picture>
+                <source srcset="dist/images/home_desktop.webp" media="(min-width: 768px)" height="800px">
+                <img src="dist/images/home_mobile.webp" alt="Our New Collection" loading="lazy">
+            </picture>
+        </div>
+        <div class="hero__overlay">
+            <h1 class="hero__overlay__title">Sale of the summer collection</h1>
+            <div class="hero__overlay__cta">
+                <a href="#">
+                    <div class="hero__overlay__cta__icon">
+                        <img src="src/SVG/arrow_right.svg" alt="See Our New Collection" loading="lazy">
+                    </div>
+                    <a href="#" class="hero__overlay__cta__text">Shop now</a>
+                </a>
+            </div>
+        </div>
+        <div class="hero__reassurance">
+            <div class="hero__reassurance__container">
+                <div class="hero__reassurance__container__icon">
+                    <img src="src/SVG/car.svg" alt="Free Shipping" loading="lazy">
+                </div>
+                <div class="hero__reassurance__container__content">
+                    <h2 class="hero__reassurance__container__content__title">Free Shipping</h2>
+                    <p class="hero__reassurance__container__content__description">On purchases over $199</p>
+                </div>
+            </div>
+            <div class="hero__reassurance__container">
+                <div class="hero__reassurance__container__icon">
+                    <img src="src/SVG/happy.svg" alt="Happy Customers" loading="lazy">
+                </div>
+                <div class="hero__reassurance__container__content">
+                    <h2 class="hero__reassurance__container__content__title">99% Satisfied Customers</h2>
+                    <p class="hero__reassurance__container__content__description">Our clients' opinions
+                        speak for themselves</p>
+                </div>
+            </div>
+            <div class="hero__reassurance__container">
+                <div class="hero__reassurance__container__icon">
+                    <img src="src/SVG/shield.svg" alt="Originality guaranteed" loading="lazy">
+                </div>
+                <div class="hero__reassurance__container__content">
+                    <h2 class="hero__reassurance__container__content__title">Originality Guaranteed</h2>
+                    <p class="hero__reassurance__container__content__description">30 days warranty for each
+                        product from our store</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- FEATURED SECTION -->
+    <section class="featured">
+        <div class="featured__item">
+            <div class="featured__item__background">
+                <picture>
+                    <source srcset="dist/images/home_1_desktop.webp" media="(min-width: 768px)">
+                    <img src="dist/images/home_1_desktop.webp" alt="News arrivals" loading="lazy">
+                </picture>
+            </div>
+            <div class="featured__item__content">
+                <h3 class="featured__item__content__title">New arrivals are now in!</h3>
+                <a href="#" class="button--primary">Show collection</a>
+            </div>
+        </div>
+        <div class="featured__item">
+            <div class="featured__item__background">
+                <picture>
+                    <source srcset="dist/images/home_2_desktop.webp" media="(min-width: 768px)">
+                    <img src="dist/images/home_2_desktop.webp" alt="News arrivals" loading="lazy">
+                </picture>
+            </div>
+            <div class="featured__item__content">
+                <h3 class="featured__item__content__title">Basic t-shirts $29,99</h3>
+                <a href="#" class="button--primary">More details</a>
+            </div>
+        </div>
+        <div class="featured__item">
+            <div class="featured__item__background">
+                <picture>
+                    <source srcset="dist/images/home_3_desktop.webp" media="(min-width: 768px)">
+                    <img src="dist/images/home_3_desktop.webp" alt="News arrivals" loading="lazy">
+                </picture>
+            </div>
+            <div class="featured__item__content">
+                <p class="sale--bubble">-50%</p>
+                <h3 class="featured__item__content__title">Sale this summer</h3>
+                <a href="#" class="button--primary">View all</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- PRODUCTS FOR YOU -->
+    <section class="products">
+        <div class="products__header">
+            <h4 class="products__header__title">Selected just for you</h4>
+            <a href="#" class="button--primary">Show more</a>
+        </div>
+        <div class="products__container">
+            <div class="products__item">
+                <div class="products__item__thumbnail">
+                    <picture>
+                        <source srcset="dist/images/product_desktop.webp" media="(min-width: 1600px)">
+                        <source srcset="dist/images/product_tablet.webp" media="(min-width: 768px)">
+                        <img src="dist/images/product_mobile.webp" alt="T-shirt summer vibes">
+                    </picture>
+                    <p class="sale--bubble">30%</p>
+                </div>
+                <div class="products__item__content">
+                    <h5 class="products__item__content__title">T-Shirt Summer Vibes</h5>
+                    <div class="products__item__content__prices">
+                        <p class="price--sale">$89.99</p>
+                        <p class="price--reduced">$119.99</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="products__item">
+                <div class="products__item__thumbnail">
+                    <picture>
+                        <source srcset="dist/images/product_desktop.webp" media="(min-width: 1600px)">
+                        <source srcset="dist/images/product_tablet.webp" media="(min-width: 768px)">
+                        <img src="dist/images/product_mobile.webp" alt="T-shirt summer vibes">
+                    </picture>
+                </div>
+                <div class="products__item__content">
+                    <h5 class="products__item__content__title">T-Shirt Summer Vibes</h5>
+                    <div class="products__item__prices">
+                        <p class="price--regular">$119.99</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="products__item">
+                <div class="products__item__thumbnail">
+                    <picture>
+                        <source srcset="dist/images/product_desktop.webp" media="(min-width: 1600px)">
+                        <source srcset="dist/images/product_tablet.webp" media="(min-width: 768px)">
+                        <img src="dist/images/product_mobile.webp" alt="T-shirt summer vibes">
+                    </picture>
+                </div>
+                <div class="products__item__content">
+                    <h5 class="products__item__content__title">T-Shirt Summer Vibes</h5>
+                    <div class="products__item__prices">
+                        <p class="price--regular">$119.99</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="products__item">
+                <div class="products__item__thumbnail">
+                    <picture>
+                        <source srcset="dist/images/product_desktop.webp" media="(min-width: 1600px)">
+                        <source srcset="dist/images/product_tablet.webp" media="(min-width: 768px)">
+                        <img src="dist/images/product_mobile.webp" alt="T-shirt summer vibes">
+                    </picture>
+                </div>
+                <div class="products__item__content">
+                    <h5 class="products__item__content__title">T-Shirt Summer Vibes</h5>
+                    <div class="products__item__prices">
+                        <p class="price--regular">$119.99</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- REASSURANCE -->
+    <section class="reassurance">
+        <h2 class="reassurance__title">
+            Why should you choose us?
+        </h2>
+        <div class="reassurance__container">
+            <div class="reassurance__item">
+                <div class="reassurance__item__icon">
+                    <img src="src/SVG/car-black.svg" alt="Truck icon">
+                </div>
+                <div class="reassurance__item__content">
+                    <h3 class="reassurance__item__content__title">Free Shipping</h3>
+                    <p class="reassurance__item__content__description">All purchases over $199 are eligible for free
+                        shipping via USPS First Class Mail.</p>
+                </div>
+            </div>
+
+            <div class="reassurance__item">
+                <div class="reassurance__item__icon">
+                    <img src="src/SVG/payment.svg" alt="Payment icon">
+                </div>
+                <div class="reassurance__item__content">
+                    <h3 class="reassurance__item__content__title">Easy Payments</h3>
+                    <p class="reassurance__item__content__description">All payments are processed instantly over a
+                        secure payment protocol.</p>
+                </div>
+            </div>
+
+            <div class="reassurance__item">
+                <div class="reassurance__item__icon">
+                    <img src="src/SVG/shield-black.svg" alt="Money Back icon">
+                </div>
+                <div class="reassurance__item__content">
+                    <h3 class="reassurance__item__content__title">Money-Back Guarantee</h3>
+                    <p class="reassurance__item__content__description">If an item arrived damaged or you've changed your
+                        mind, you can send it back for a full refund.</p>
+                </div>
+            </div>
+
+            <div class="reassurance__item">
+                <div class="reassurance__item__icon">
+                    <img src="src/SVG/quality.svg" alt="Quality icon">
+                </div>
+                <div class="reassurance__item__content">
+                    <h3 class="reassurance__item__content__title">Finest Quality</h3>
+                    <p class="reassurance__item__content__description">Designed to last, each of our products has been
+                        crafted with the finest materials.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--PRODUCTS TODAY -->
+    <section class="products">
+        <div class="products__header" id="products__today__header">
+            <h4 class="products__header__title">Products in today</h4>
+        </div>
+        <div class="products__container">
+            <div class="products__item">
+                <div class="products__item__thumbnail">
+                    <picture>
+                        <source srcset="dist/images/product_desktop.webp" media="(min-width: 1600px)">
+                        <source srcset="dist/images/product_tablet.webp" media="(min-width: 768px)">
+                        <img src="dist/images/product_mobile.webp" alt="T-shirt summer vibes">
+                    </picture>
+                </div>
+                <div class="products__item__content">
+                    <h5 class="products__item__content__title">T-Shirt Summer Vibes</h5>
+                    <div class="products__item__content__prices">
+                        <p class="price--regular">$119.99</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="products__item">
+                <div class="products__item__thumbnail">
+                    <picture>
+                        <source srcset="dist/images/product_desktop.webp" media="(min-width: 1600px)">
+                        <source srcset="dist/images/product_tablet.webp" media="(min-width: 768px)">
+                        <img src="dist/images/product_mobile.webp" alt="T-shirt summer vibes">
+                    </picture>
+                </div>
+                <div class="products__item__content">
+                    <h5 class="products__item__content__title">T-Shirt Summer Vibes</h5>
+                    <div class="products__item__content__prices">
+                        <p class="price--regular">$119.99</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="products__item">
+                <div class="products__item__thumbnail">
+                    <picture>
+                        <source srcset="dist/images/product_desktop.webp" media="(min-width: 1600px)">
+                        <source srcset="dist/images/product_tablet.webp" media="(min-width: 768px)">
+                        <img src="dist/images/product_mobile.webp" alt="T-shirt summer vibes">
+                    </picture>
+                    <p class="sale--bubble">30%</p>
+                </div>
+                <div class="products__item__content">
+                    <h5 class="products__item__content__title">T-Shirt Summer Vibes</h5>
+                    <div class="products__item__content__prices">
+                        <p class="price--sale">$89.99</p>
+                        <p class="price--reduced">$119.99</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="products__item">
+                <div class="products__item__thumbnail">
+                    <picture>
+                        <source srcset="dist/images/product_desktop.webp" media="(min-width: 1600px)">
+                        <source srcset="dist/images/product_tablet.webp" media="(min-width: 768px)">
+                        <img src="dist/images/product_mobile.webp" alt="T-shirt summer vibes">
+                    </picture>
+                </div>
+                <div class="products__item__content">
+                    <h5 class="products__item__content__title">T-Shirt Summer Vibes</h5>
+                    <div class="products__item__prices">
+                        <p class="price--regular">$119.99</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter">
+        <div class="newsletter__container">
+            <div class="newsletter__container__background">
+                <picture>
+                    <img src="dist/images/newsletter.webp" alt="Newsletter background" loading="lazy">
+                </picture>
+            </div>
+            <div class="newsletter__content">
+                <h3 class="newsletter__content__title">Subscribe to our newsletter and
+                    receive exclusive offers every week</h3>
+                <a href="#" class="button--primary">Enter your email</a>
+                <a href="#" class="button--secondary">Subscribe</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer__container">
+        <div class="footer__brand">
+            <div class="footer__brand__logo">
+                <img src="src/SVG/header/logo.svg" class="footer__brand__logo__img" alt="E-shop's logo"
+                     loading="lazy">
+                <a href="index.html" class="footer__brand__logo__link"><span>E-</span>Shop</a>
+            </div>
+            <p class="footer__brand__description">House My Brand designs clothing for the young, the old & everyone
+                in between – but most importantly, for the fashionable</p>
+            <ul class="footer__brand__social">
+                <li><a href="#"><img src="src/SVG/footer/facebook.svg" alt="Facebook link" loading="lazy"></a></li>
+                <li><a href="#"><img src="src/SVG/footer/twitter.svg" alt="Twitter link" loading="lazy"></a></li>
+                <li><a href="#"><img src="src/SVG/footer/linkedin.svg" alt="Linkedin link" loading="lazy"></a></li>
+                <li><a href="#"><img src="src/SVG/footer/instagram.svg" alt="Instagram link" loading="lazy"></a>
+                </li>
+                <li><a href="#"><img src="src/SVG/footer/youtube.svg" alt="Youtube link" loading="lazy"></a></li>
+            </ul>
+        </div>
+
+        <div class="footer__links">
+            <details class="footer__link" open>
+                <summary class="footer__link__summary">
+                    <h5 class="footer__link__summary__title">Shopping Online</h5>
+                    <img src="src/SVG/open-close.svg" class="footer__link__summary__icon" alt="Toggle links"
+                         loading="lazy">
+                </summary>
+                <ul class="footer__link__list">
+                    <li class="footer__link__list__item"><a href="#">Order Status</a></li>
+                    <li class="footer__link__list__item"><a href="#">Shopping and Delivery</a></li>
+                    <li class="footer__link__list__item"><a href="#">Returns</a></li>
+                    <li class="footer__link__list__item"><a href="#">Payment Options</a></li>
+                    <li class="footer__link__list__item"><a href="#">Contact Us</a></li>
+                </ul>
+            </details>
+
+            <details class="footer__link" open>
+                <summary class="footer__link__summary">
+                    <h5 class="footer__link__summary__title">Information</h5>
+                    <img src="src/SVG/open-close.svg" class="footer__link__summary__icon" alt="Toggle links"
+                         loading="lazy">
+                </summary>
+                <ul class="footer__link__list">
+                    <li class="footer__link__list__item"><a href="#">Gift Cards</a></li>
+                    <li class="footer__link__list__item"><a href="#">Find a Store</a></li>
+                    <li class="footer__link__list__item"><a href="#">Newsletter</a></li>
+                    <li class="footer__link__list__item"><a href="#">Become a member</a></li>
+                    <li class="footer__link__list__item"><a href="#">Site feedback</a></li>
+                </ul>
+            </details>
+
+            <details class="footer__link" open>
+                <summary class="footer__link__summary">
+                    <h5 class="footer__link__summary__title">Contact</h5>
+                    <img src="src/SVG/open-close.svg" class="footer__link__summary__icon" alt="Toggle links"
+                         loading="lazy">
+                </summary>
+                <ul class="footer__link__list">
+                    <li class="footer__link__list__item"><a href="#">eshop@eshop.com</a></li>
+                    <li class="footer__link__list__item"><a href="#">Hotline: <span>+1 131 138 138</span></a></li>
+                </ul>
+            </details>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+// FOOTER
+.footer {
+  padding: clamp(3rem, 4vw, 5rem) clamp(3.7rem, 10vw, 18rem);
+  border-top: 1px solid $color-input-border;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  &__brand {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 41.2rem;
+
+    &__logo {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+
+      &__link {
+        font-size: 1.9rem;
+        font-weight: 600;
+
+        span {
+          color: $color-btn-primary;
+        }
+      }
+    }
+
+    &__description {
+      font-size: 1.3rem;
+      color: $color-font-quaternary;
+      line-height: clamp(1.5rem, 5vw, 2.6rem);
+    }
+
+    &__social {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+
+      a {
+        padding: 0.5rem;
+      }
+
+    }
+  }
+
+  &__link {
+    margin-bottom: 2rem;
+
+    &__summary {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 3.5rem;
+
+      &__title {
+        font-size: 1.4rem;
+        font-weight: 600;
+      }
+
+      &__icon {
+        transition: transform 0.5s ease;
+        transform: rotate(0deg);
+      }
+    }
+
+    &__list {
+      &__item {
+        font-size: 1.3rem;
+        line-height: 2.9rem;
+      }
+    }
+
+    &[open] .footer__link__summary__icon {
+      transform: rotate(-180deg);
+    }
+  }
+}
+
+@include responsive($tablet) {
+  .footer {
+    border-top: none;
+
+    &__container {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    &__links {
+      display: flex;
+      gap: clamp(4rem, 10vw, 13.3rem);
+    }
+
+    &__link {
+      &__summary {
+        pointer-events: none;
+
+        &__icon {
+          display: none;
+        }
+      }
+    }
+  }
+}

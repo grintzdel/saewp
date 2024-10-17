@@ -1,0 +1,360 @@
+// HERO SECTION
+.hero {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $color-font-primary;
+    opacity: 0.2;
+  }
+
+  &__background {
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__overlay {
+    position: absolute;
+    left: clamp(10%, 17%, 25%);
+    top: 32.5%;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 3.8rem;
+    color: $color-font-secondary;
+    max-width: 36.5rem;
+    height: auto;
+
+    &__title {
+      font-size: clamp(4.3rem, 5vw, 6.6rem);
+      line-height: clamp(4.2rem, 5vw, 7.2rem);
+      font-weight: bold;
+    }
+
+    &__cta {
+      display: flex;
+      align-items: center;
+      gap: 2.2rem;
+
+      &__icon {
+        width: 3.9rem;
+        height: 3.9rem;
+        border-radius: 50%;
+        background-color: $color-btn-primary;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      &__text {
+        font-size: 1.3rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.14rem;
+      }
+    }
+  }
+
+  &__reassurance {
+    display: none;
+  }
+}
+
+// FEATURED
+.featured {
+  display: none;
+}
+
+// PRODUCTS
+.products {
+  display: flex;
+  flex-direction: column;
+  padding: 0 clamp(3.7rem, 10vw, 16rem);
+  gap: clamp(3.1rem, 4vw, 6.5rem);
+  margin-top: clamp(3rem, 4vw, 9.6rem);
+  margin-bottom: clamp(3rem, 6vw, 14rem);
+  overflow: hidden;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
+
+    &__title {
+      font-size: clamp(2.1rem, 2vw, 2.9rem);
+      font-weight: lighter;
+      line-height: 3.1rem;
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: clamp(1.9rem, 4vw, 6.5rem);
+  }
+
+  &__item {
+    flex: 1;
+
+    &__thumbnail {
+      position: relative;
+
+      img {
+        width: 100%;
+        max-height: 38.5rem;
+        min-width: 11.2rem;
+        min-height: 15.9rem;
+        object-fit: cover;
+      }
+
+      .sale--bubble {
+        position: absolute;
+        top: 10%;
+        left: 10%;
+      }
+    }
+
+    &__content {
+      margin-top: clamp(0.5rem, 2vw, 3rem);
+
+      &__title {
+        font-size: clamp(1.3rem, 3vw, 1.6rem);
+        font-weight: lighter;
+        line-height: clamp(1.5rem, 5vw, 2.7rem);
+      }
+
+      &__prices {
+        display: flex;
+        gap: clamp(1rem, 2vw, 3rem);
+      }
+    }
+  }
+
+  .button--primary {
+    align-content: center;
+  }
+}
+
+// REASSURANCE
+.reassurance {
+  padding: 0 clamp(3.7rem, 10vw, 16rem);
+
+  &__title {
+    font-size: clamp(2.1rem, 4vw, 2.9rem);
+    text-align: center;
+    font-weight: lighter;
+    line-height: 3.1rem;
+    margin-bottom: clamp(3.6rem, 4vw, 9.6rem);
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 2.15rem;
+
+    &:nth-child(2) &__icon {
+      background-color: $color-bg-icon;
+    }
+
+    &__icon {
+      display: flex;
+      width: 7rem;
+      height: 7rem;
+      padding: 2.4rem 1.8rem;
+      background-color: $color-bg-icon-secondary;
+      border-radius: 1rem;
+    }
+
+    &__content {
+      &__title {
+        font-size: clamp(1.3rem, 10vw, 1.6rem);
+        font-weight: 600;
+        margin-bottom: 2rem;
+      }
+
+      &__description {
+        font-size: clamp(1.2rem, 10vw, 1.3rem);
+        color: $color-font-quaternary;
+      }
+    }
+  }
+}
+
+
+// PRODUCTS TODAY
+#products__today__header {
+  justify-content: center;
+}
+
+
+
+// RESPONSIVE
+@include responsive($tablet) {
+  //HERO SECTION
+  .hero {
+    &__reassurance {
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-start;
+      gap: 5.6rem;
+      z-index: 3;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 76.3%;
+      height: auto;
+      padding: clamp(3.6rem, 4vw, 3rem) clamp(5rem, 4vw, 9.7rem) clamp(1.8rem, 4vw, 2.8rem) clamp(3.5rem, 4vw, 5rem);
+      background-color: $color-font-secondary;
+      border-top-right-radius: 7rem;
+
+      &__container {
+        display: flex;
+        gap: 2.7rem;
+
+        &__icon {
+          min-width: 3.9rem;
+          height: 3.9rem;
+          border-radius: 1rem;
+          background-color: $color-bg-icon;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        &__content {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+
+          &__title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            line-height: 2rem;
+          }
+
+          &__description {
+            font-size: 1.2rem;
+            color: $color-font-tertiary;
+            line-height: 1.5;
+            max-width: 16rem;
+            text-wrap: balance;
+          }
+        }
+      }
+    }
+  }
+
+  // FEATURED
+  .featured {
+    padding: 7.3rem clamp(3.7rem, 10vw, 16rem) 0 clamp(3.7rem, 10vw, 16rem);
+    gap: 34px;
+    display: flex;
+
+    &__item:first-child {
+      flex: 2;
+    }
+
+    &__item {
+      flex: 1;
+      position: relative;
+
+      &__background {
+        img {
+          width: 100%;
+          object-fit: cover;
+          max-height: 37.3rem;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: $color-font-primary;
+          opacity: 0.3;
+        }
+      }
+
+      &__content {
+        position: absolute;
+        bottom: 15%;
+        left: 10%;
+
+        &__title {
+          font-size: 2.5rem;
+          color: $color-font-secondary;
+          margin-bottom: 2.5rem;
+          margin-top: 1.5rem;
+          max-width: 16.3rem;
+        }
+      }
+    }
+  }
+
+  // PRODUCTS
+  .products {
+
+    &__container {
+      flex-wrap: wrap;
+    }
+
+    &__item {
+      &__thumbnail {
+        img {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+
+  .button--primary {
+    border: 1px solid $color-btn-border;
+  }
+
+
+  // REASSURANCE
+  .reassurance {
+    padding: 0 clamp(3.7rem, 10vw, 16rem);
+
+    &__container {
+      flex-direction: row;
+      gap: 10.2rem;
+    }
+
+    &__item {
+      &__content {
+        &__title {
+          font-size: 1.6rem;
+        }
+      }
+    }
+  }
+}
+
+@include max(calc($desktop - $mobile)) {
+  // FEATURED
+  .featured {
+    flex-direction: column;
+  }
+
+  .reassurance {
+    &__container {
+      flex-direction: column;
+    }
+  }
+}

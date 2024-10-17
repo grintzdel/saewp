@@ -1,0 +1,11 @@
+@function z($name) {
+  @if index($z-indexes, $name) {
+    @return(length($z-indexes) - index($z-indexes, $name))+1;
+  }
+
+  @else {
+    @warn 'Il n\'y a pas d\'élément "#{$name}" dans la liste. Choisir un parmi : #{$z-indexes}';
+
+    @return null;
+  }
+}
