@@ -61,6 +61,14 @@ button {
   padding: 1.5rem 2.5rem;
 }
 
+.button--heart {
+  height: 4.9rem;
+  width: fit-content;
+  padding: 1.6rem;
+  border-radius: 50%;
+  border: 1px solid $color-btn-border;
+}
+
 
 // PRICES AND SALES
 .sale--bubble {
@@ -71,6 +79,8 @@ button {
   color: $color-font-secondary;
   font-size: clamp(0.9rem, 2vw, 1.2rem);
   border-radius: 4rem;
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
 .price--sale {
