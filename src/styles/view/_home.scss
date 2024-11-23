@@ -193,13 +193,10 @@
   }
 }
 
-
 // PRODUCTS TODAY
 #products__today__header {
   justify-content: center;
 }
-
-
 
 // RESPONSIVE
 @include responsive($tablet) {
@@ -216,7 +213,8 @@
       left: 0;
       width: 76.3%;
       height: auto;
-      padding: clamp(3.6rem, 4vw, 3rem) clamp(5rem, 4vw, 9.7rem) clamp(1.8rem, 4vw, 2.8rem) clamp(3.5rem, 4vw, 5rem);
+      padding: clamp(3.6rem, 4vw, 3rem) clamp(5rem, 4vw, 9.7rem)
+        clamp(1.8rem, 4vw, 2.8rem) clamp(3.5rem, 4vw, 5rem);
       background-color: $color-font-secondary;
       border-top-right-radius: 7rem;
 
@@ -308,7 +306,6 @@
 
   // PRODUCTS
   .products {
-
     &__container {
       flex-wrap: wrap;
     }
@@ -325,7 +322,6 @@
   .button--primary {
     border: 1px solid $color-btn-border;
   }
-
 
   // REASSURANCE
   .reassurance {
